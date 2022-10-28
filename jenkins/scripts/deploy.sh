@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -x
-docker run -d -p 80:80 --name my-apache-php-app -v C:\\Users\\png_h\\Downloads\\ICT3103 Secure Software Development\\Lab\\Lab 7\\jenkins-php-selenium-test\\jenkins-php-selenium-test\\src:/var/www/html php:7.2-apache
+docker run -d -p 80:80 --name my-apache-php-app -v /Users/suhaili/documents/github/jenkins-php-selenium-test-1\\src:/var/www/html php:7.2-apache
 sleep 1
 set +x
 
