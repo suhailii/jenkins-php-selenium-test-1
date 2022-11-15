@@ -5,8 +5,9 @@ pipeline {
 	        agent any
 				steps {
 				    sh 'docker network create --driver bridge my-net'
-			}
-		}
+			    }
+	    }
+
 		stage('Integration UI Test') {
 			parallel {
 				stage('Deploy') {
@@ -23,8 +24,8 @@ pipeline {
 				stage('Headless Browser Test') {
 					agent {
 						docker {
-							image 'maven:3-alpine' 
-							args '-v /root/.m2:/root/.m2 --network my-net' 
+							image 'maven:3-alpine'
+							args '-v /root/.m2:/root/.m2 --network my-net'
 						}
 					}
 					steps {
